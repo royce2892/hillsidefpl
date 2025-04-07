@@ -196,7 +196,8 @@ class PlayerMatchPerformance(Base):
 
 
 # Database setup (example)
-DATABASE_URL = "postgresql://postgres:postgres@localhost:5432/hillsidefpl"
+
+DATABASE_URL = "postgresql://hillsidefpl_user:JSlr0FygB1Zhp35klC2GB3IoftrGT8C1@dpg-cvppjfmuk2gs739n94i0-a.oregon-postgres.render.com/hillsidefpl"
 engine = create_engine(DATABASE_URL)
 # Base.metadata.drop_all(engine)  # WARNING: This will delete all data!
 Base.metadata.create_all(engine)
@@ -235,44 +236,55 @@ if __name__ == '__main__':
         for team in teams:
             db.refresh(team)
 
-        g1 = Player(team_id=team_mobin.id, name="Royce", position="Forward", value=0.0)
-        g2 = Player(team_id=team_mobin.id, name="Ashwin S", position="Midfielder", value=0.0)
-        g3 = Player(team_id=team_mobin.id, name="Anoop Mammachen", position="Defender", value=0.0)
-        g4 = Player(team_id=team_mobin.id, name="Jerry", position="Goalkeeper", value=0.0)
-        g5 = Player(team_id=team_mobin.id, name="Jijo", position="Midfielder", value=0.0)
-        g6 = Player(team_id=team_mobin.id, name="Sanal", position="Defender", value=0.0)
-        g7 = Player(team_id=team_mobin.id, name="Ajith K", position="Forward", value=0.0)
-        g8 = Player(team_id=team_mobin.id, name="Renju", position="Defender", value=0.0)
+        g1 = Player(team_id=team_mobin.id, name="Royce", position="Defended", value=0.0)
+        g2 = Player(team_id=team_mobin.id, name="Alex", position="Forward", value=0.0)
+        g3 = Player(team_id=team_mobin.id, name="Ismail", position="Defender", value=0.0)
+        g4 = Player(team_id=team_mobin.id, name="Mathews", position="Midfielder", value=0.0)
+        g5 = Player(team_id=team_mobin.id, name="Anoop Jose", position="Midfielder", value=0.0)
+        g6 = Player(team_id=team_mobin.id, name="Nishant", position="Defender", value=0.0)
+        g7 = Player(team_id=team_mobin.id, name="Ajit Kumar", position="Goalkeeper", value=0.0)
+        g8 = Player(team_id=team_mobin.id, name="Hans", position="Defender", value=0.0)
+        g9 = Player(team_id=team_mobin.id, name="Fijas", position="Defender", value=0.0)
+        g10 = Player(team_id=team_mobin.id, name="Arnav", position="Defender", value=0.0)
+        g11 = Player(team_id=team_mobin.id, name="Mobin", position="Defender", value=0.0)
 
         u1 = Player(team_id=team_anoop.id, name="Joe", position="Forward", value=0.0)
-        u2 = Player(team_id=team_anoop.id, name="Nishant", position="Midfielder", value=0.0)
-        u3 = Player(team_id=team_anoop.id, name="Anzer", position="Defender", value=0.0)
-        u4 = Player(team_id=team_anoop.id, name="Arun", position="Goalkeeper", value=0.0)
-        u5 = Player(team_id=team_anoop.id, name="Antony", position="Midfielder", value=0.0)
-        u6 = Player(team_id=team_anoop.id, name="Rahul", position="Defender", value=0.0)
-        u7 = Player(team_id=team_anoop.id, name="Shiv", position="Forward", value=0.0)
+        u2 = Player(team_id=team_anoop.id, name="Jishnu", position="Midfielder", value=0.0)
+        u3 = Player(team_id=team_anoop.id, name="Adren", position="Defender", value=0.0)
+        u4 = Player(team_id=team_anoop.id, name="Aron", position="Goalkeeper", value=0.0)
+        u5 = Player(team_id=team_anoop.id, name="Shemeer", position="Midfielder", value=0.0)
+        u6 = Player(team_id=team_anoop.id, name="Jerry", position="Defender", value=0.0)
+        u7 = Player(team_id=team_anoop.id, name="Addis", position="Forward", value=0.0)
         u8 = Player(team_id=team_anoop.id, name="Vishal", position="Defender", value=0.0)
+        u9 = Player(team_id=team_anoop.id, name="Ricky", position="Defender", value=0.0)
+        u10 = Player(team_id=team_anoop.id, name="Ajith Krishnan", position="Defender", value=0.0)
+        u11 = Player(team_id=team_mobin.id, name="Anoop Mammachen", position="Defender", value=0.0)
 
-        r1 = Player(team_id=team_ashwin.id, name="Alex", position="Forward", value=0.0)
-        r2 = Player(team_id=team_ashwin.id, name="Hari", position="Midfielder", value=0.0)
-        r3 = Player(team_id=team_ashwin.id, name="Jithin", position="Defender", value=0.0)
-        r4 = Player(team_id=team_ashwin.id, name="Amal", position="Goalkeeper", value=0.0)
-        r5 = Player(team_id=team_ashwin.id, name="Benny", position="Midfielder", value=0.0)
-        r6 = Player(team_id=team_ashwin.id, name="Diwin", position="Defender", value=0.0)
-        r7 = Player(team_id=team_ashwin.id, name="Rajesh", position="Forward", value=0.0)
-        r8 = Player(team_id=team_ashwin.id, name="Ricky", position="Defender", value=0.0)
+        r1 = Player(team_id=team_ashwin.id, name="Nevin", position="Forward", value=0.0)
+        r2 = Player(team_id=team_ashwin.id, name="Advaith", position="Midfielder", value=0.0)
+        r3 = Player(team_id=team_ashwin.id, name="Jijo", position="Defender", value=0.0)
+        r4 = Player(team_id=team_ashwin.id, name="Ashwin Jayaprakash", position="Goalkeeper", value=0.0)
+        r5 = Player(team_id=team_ashwin.id, name="Leonal", position="Midfielder", value=0.0)
+        r6 = Player(team_id=team_ashwin.id, name="Prasad", position="Defender", value=0.0)
+        r7 = Player(team_id=team_ashwin.id, name="Sreenath", position="Forward", value=0.0)
+        r8 = Player(team_id=team_ashwin.id, name="Viju", position="Defender", value=0.0)
+        r9 = Player(team_id=team_ashwin.id, name="Aji", position="Defender", value=0.0)
+        r10 = Player(team_id=team_ashwin.id, name="Rajesh", position="Defender", value=0.0)
+        r11 = Player(team_id=team_mobin.id, name="Ashwin Sajeev", position="Defender", value=0.0)
 
-        a1 = Player(team_id=team_anzer.id, name="Jishnu", position="Forward", value=0.0)
-        a2 = Player(team_id=team_anzer.id, name="Ashwin J", position="Midfielder", value=0.0)
+        a1 = Player(team_id=team_anzer.id, name="Kurien", position="Forward", value=0.0)
+        a2 = Player(team_id=team_anzer.id, name="Anzer", position="Midfielder", value=0.0)
         a3 = Player(team_id=team_anzer.id, name="Sreejith", position="Defender", value=0.0)
-        a4 = Player(team_id=team_anzer.id, name="Ajit", position="Goalkeeper", value=0.0)
-        a5 = Player(team_id=team_anzer.id, name="Kiran", position="Midfielder", value=0.0)
-        a6 = Player(team_id=team_anzer.id, name="Vishnu", position="Defender", value=0.0)
-        a7 = Player(team_id=team_anzer.id, name="Nizar", position="Forward", value=0.0)
-        a8 = Player(team_id=team_anzer.id, name="Mobin", position="Defender", value=0.0)
+        a4 = Player(team_id=team_anzer.id, name="George", position="Goalkeeper", value=0.0)
+        a5 = Player(team_id=team_anzer.id, name="Ashwin B", position="Midfielder", value=0.0)
+        a6 = Player(team_id=team_anzer.id, name="Adam", position="Defender", value=0.0)
+        a7 = Player(team_id=team_anzer.id, name="Hari", position="Forward", value=0.0)
+        a8 = Player(team_id=team_anzer.id, name="Antony", position="Defender", value=0.0)
+        a9 = Player(team_id=team_anzer.id, name="Sam", position="Defender", value=0.0)
+        a10 = Player(team_id=team_anzer.id, name="Sanal", position="Defender", value=0.0)
 
-        players = [g1, g2, g3, g4, g5, g6, g7, g8, u1, u2, u3, u4, u5, u6, u7, u8,
-                   r1, r2, r3, r4, r5, r6, r7, r8, a1, a2, a3, a4, a5, a6, a7, a8]
+        players = [g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, u1, u2, u3, u4, u5, u6, u7, u8, u9, u10, u11,
+                   r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10]
         db.add_all(players)
         db.commit()
         for player in players:
